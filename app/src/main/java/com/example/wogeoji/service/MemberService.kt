@@ -1,7 +1,7 @@
 package com.example.wogeojiapp.service
 
 import com.example.wogeoji.dto.RegistrationRequest
-import com.example.wogeoji.service.Member
+import com.example.wogeoji.domain.Member
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
