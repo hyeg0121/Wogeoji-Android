@@ -1,4 +1,4 @@
-package com.example.wogeoji.service
+package com.example.wogeoji.domain
 
 data class Member(
     val name: String,
