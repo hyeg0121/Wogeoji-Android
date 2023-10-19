@@ -27,6 +27,7 @@
         android:text="아이디"/>
 
     <EditText
+        android:id="@+id/member_id"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginLeft="30dp"
@@ -44,6 +45,7 @@
         android:text="비밀번호"/>
 
     <EditText
+        android:id="@+id/member_password"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginLeft="30dp"
