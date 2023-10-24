@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
             <TextView
-                android:text="@string/app_name"
                 android:textSize="20sp"
                 android:textColor="@color/gray700"
                 android:fontFamily="@font/pretendard"
