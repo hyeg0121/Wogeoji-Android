@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 interface MemberService {
     @GET("/members/{id}")
-    fun getAllMembers(@Path("id") id: Int): Call<Member>
+    fun getMembers(@Path("id") id: Long): Call<Member>
 
     @POST("/members/member")
     fun postMember(@Body requestBody: RegistrationRequest): Call<RegistrationRequest>
