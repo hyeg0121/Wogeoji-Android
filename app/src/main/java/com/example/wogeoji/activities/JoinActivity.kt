@@ -1,4 +1,4 @@
-package com.example.wogeoji.activity
+package com.example.wogeoji.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import com.example.wogeoji.R
-import com.example.wogeoji.dto.RegistrationRequest
-import com.example.wogeoji.service.ApiService
+import com.example.wogeoji.dto.user.RegistrationRequest
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,7 +33,7 @@ class JoinActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val apiService = retrofit.create(ApiService::class.java)
+        val apiService = retrofit.create(AuthService::class.java)
 
         loginButton.setOnClickListener {
             val name = nameEditText.text.toString()

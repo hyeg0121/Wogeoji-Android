@@ -18,17 +18,12 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".activity.HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="true" >
         </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-
-        <activity
-            android:name=".activity.IndexActivity"
+            android:name=".activities.IndexActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,17 +33,17 @@
         </activity>
 
         <activity
-            android:name=".activity.JoinActivity"
+            android:name=".activities.JoinActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".activity.MyGroupActivity"
+            android:name=".activities.MyGroupActivity"
             android:exported="true">
         </activity>
 

@@ -5,103 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.HomeActivity">
-
-        <LinearLayout
-            android:id="@+id/header"
-            app:layout_constraintStart_toStartOf="parent"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="20sp"
-                android:textColor="@color/gray700"
-                android:fontFamily="@font/pretendard"
-                android:textFontWeight="600"
-                android:layout_gravity="left"
-                android:layout_marginLeft="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/main_info"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="30dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            <TextView
-                android:text="황혜경님의"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:fontFamily="@font/pretendard"
-                android:id="@+id/username_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="이번주 소비내역"
-                android:id="@+id/term_textview"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:fontFamily="@font/pretendard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:text="54,300원"
-                android:id="@+id/spend_textview"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:fontFamily="@font/pretendard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <!--TODO: 라인 그리기 -->
-            <TextView
-                android:text="#아가리 저축러"
-                android:id="@+id/hashtag_textview"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:textFontWeight="300"
-                android:fontFamily="@font/pretendard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
+        android:orientation="vertical">
         <TextView
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_info"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="58dp"
-            android:id="@+id/group_section_info_text"
-            android:text="내가 가입한 그룹"
-            android:textSize="14sp"
-            android:textColor="@color/gray700"
-            android:textFontWeight="300"
-            android:fontFamily="@font/pretendard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/group_container"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/group_section_info_text"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:text="hi"/>
+    </LinearLayout>
 </ScrollView>
