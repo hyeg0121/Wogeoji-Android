@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:gravity="center"
-    >
+    android:padding="18dp">
+
     <TextView
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="start"
+        android:layout_marginTop="154dp"
         android:text="로그인"
+        android:fontFamily="@font/seolleim"
         android:textColor="@color/black"
         android:textFontWeight="700"
-        android:layout_marginBottom="50dp"
-        android:textSize="22dp"
-        />
+        android:textSize="22dp" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/gray700"
-        android:textSize="14dp"
-        android:fontFamily="@font/pretendard"
-        android:text="아이디"/>
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard"
+            android:text="이메일"
+            android:textColor="@color/gray700"
+            android:textSize="16dp" />
 
-    <EditText
-        android:id="@+id/member_id"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/login_border"/>
-    <TextView
+        <EditText
+            android:id="@+id/email_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/login_border"
+            android:padding="2dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/gray700"
-        android:fontFamily="@font/pretendard"
-        android:textFontWeight="300"
-        android:textSize="14dp"
-        android:text="비밀번호"/>
+        android:layout_marginBottom="46dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/member_password"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/login_border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard"
+            android:text="비밀번호"
+            android:textColor="@color/gray700"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/pw_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/login_border"
+            android:padding="2dp"
+            android:textSize="16dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="@color/primary"
-        android:textColor="@color/black"
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_gravity="bottom"
         android:fontFamily="@font/pretendard"
+        android:textFontWeight="600"
+        android:textSize="16sp"
         android:text="로그인"
-        />
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

@@ -46,6 +46,8 @@
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/pretendard"
             android:text="로그인"
+            android:textFontWeight="600"
+            android:textSize="16sp"
             android:textColor="@color/black" />
 
         <Button
@@ -56,6 +58,8 @@
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/pretendard"
             android:text="회원가입"
+            android:textFontWeight="600"
+            android:textSize="16sp"
             android:textColor="@color/black" />
 
 
