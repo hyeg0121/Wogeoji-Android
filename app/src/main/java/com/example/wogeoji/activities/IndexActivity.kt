@@ -1,4 +1,4 @@
-package com.example.wogeoji.activity
+package com.example.wogeoji.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
