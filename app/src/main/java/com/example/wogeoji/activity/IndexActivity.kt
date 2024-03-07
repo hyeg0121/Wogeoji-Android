@@ -21,7 +21,7 @@ class IndexActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val joinButton = findViewById<Button>(R.id.join_member_buttom)
+        val joinButton = findViewById<Button>(R.id.join_button)
 
         joinButton.setOnClickListener{
             val intent = Intent(this, JoinActivity::class.java)
