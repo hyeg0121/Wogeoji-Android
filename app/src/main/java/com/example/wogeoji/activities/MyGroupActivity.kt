@@ -1,11 +1,10 @@
-package com.example.wogeoji.activity
+package com.example.wogeoji.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import com.example.wogeoji.R
-import com.example.wogeoji.activity.HomeActivity
 
 class MyGroupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
