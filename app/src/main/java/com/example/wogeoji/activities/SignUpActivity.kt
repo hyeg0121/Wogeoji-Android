@@ -1,6 +1,7 @@
 package com.example.wogeoji.activities
 
 import RetrofitClient
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import android.widget.EditText
 import com.example.wogeoji.R
 import com.example.wogeoji.domain.User
 import com.example.wogeoji.dto.user.SignUpRequest
+import com.example.wogeoji.util.ToastHelper
 import com.example.wogeojiapp.service.UserService
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,7 +21,7 @@ class SignUpActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_join)
+        setContentView(R.layout.activity_sign_up)
 
         val signUpButton = findViewById<Button>(R.id.signup_button)
         val nameEditText = findViewById<EditText>(R.id.name_edittext)
@@ -37,7 +39,7 @@ class SignUpActivity() : AppCompatActivity() {
 
     }
 
-    fun signUpUser(signUpRequest: SignUpRequest) {
+    private fun signUpUser(signUpRequest: SignUpRequest) {
         val retrofit = RetrofitClient.getRetrofitInstance();
         val userService = retrofit.create(UserService::class.java)
         val call = userService.signUpUser(signUpRequest)
@@ -47,16 +49,25 @@ class SignUpActivity() : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val user = response.body()
                     Log.d("my tag", "user" + user.toString())
+                    ToastHelper.showToast(this@SignUpActivity, "회원가입이 완료되었습니다.")
+                    navigateToSignInActivity()
+                } else if (response.code() == 409) {
+                    ToastHelper.showToast(this@SignUpActivity, "해당 이메일로 가입된 계정이 있습니다.")
                 }
             }
 
             override fun onFailure(call: Call<User>, t: Throwable) {
-
-                // TODO: 실패 했을떄 토스트 메세지
-                Log.d("my tag", "error" + t.toString())
+                ToastHelper.showToast(this@SignUpActivity, "회원가입에 실패하였습니다.")
             }
 
         })
     }
+
+    private fun navigateToSignInActivity() {
+        val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 
 }
