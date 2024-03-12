@@ -1,6 +1,6 @@
 package com.example.wogeoji.dto.user
 
-data class LoginRequest(
+data class SignInRequest(
     val email: String,
     val password: String
 )
