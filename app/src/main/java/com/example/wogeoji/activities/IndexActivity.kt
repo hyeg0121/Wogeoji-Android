@@ -17,14 +17,14 @@ class IndexActivity : AppCompatActivity() {
 
         // 버튼 누르면 각각의 화면으로 가기
         loginButton.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
 
         val joinButton = findViewById<Button>(R.id.join_button)
 
         joinButton.setOnClickListener{
-            val intent = Intent(this, JoinActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
     }
