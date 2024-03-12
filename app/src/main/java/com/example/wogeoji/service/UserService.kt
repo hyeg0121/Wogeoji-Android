@@ -1,23 +1,18 @@
 package com.example.wogeojiapp.service
 
-import com.example.wogeoji.dto.user.RegistrationRequest
 import com.example.wogeoji.domain.User
-import com.example.wogeoji.dto.user.LoginRequest
+import com.example.wogeoji.dto.user.SignInRequest
+import com.example.wogeoji.dto.user.SignUpRequest
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Path
+import java.util.Objects
 
 
 interface UserService {
-    @GET("/members/{id}")
-    fun getMembers(@Path("id") id: Long): Call<User>
-
-    @POST("/members/member")
-    fun postMember(@Body requestBody: RegistrationRequest): Call<RegistrationRequest>
-
     @POST("/api/users/login")
-    fun loginUser(@Body requestBody: LoginRequest): Call<User>
+    fun loginUser(@Body requestBody: SignInRequest): Call<User>
 
+    @POST("/api/users")
+    fun signUpUser(@Body requestBody: SignUpRequest): Call<User>
 }
