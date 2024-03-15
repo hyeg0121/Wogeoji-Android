@@ -1,16 +1,22 @@
 package com.example.wogeoji.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.wogeoji.R
+import com.example.wogeoji.util.SharedPreferencesHelper
 
 class IndexActivity : AppCompatActivity() {
 
+    lateinit var sharedPreferencesHelper: SharedPreferencesHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_index)
+
+        sharedPreferencesHelper = SharedPreferencesHelper
+        sharedPreferencesHelper.init(this)
 
         // 버튼들 불러오기
         val loginButton = findViewById<Button>(R.id.login_button)
